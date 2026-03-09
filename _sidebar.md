@@ -1,5 +1,3 @@
-<!-- _sidebar.md -->
-
 * [🏠 Hjem](/)
 
 * 🐧 **Linux / Arch**
@@ -31,7 +29,7 @@
   * [VLAN Oppsett](network/vlan-setup.md)
 
 * 🐳 **Docker**
-  * [MkDocs / Docsify Setup](docker/mkdocs-setup.md)
+  * [Dokumentserver Oppsett](docker/mkdocs-setup.md)
 
 * ⚙️ **Proxmox**
   * [ZFS Proxmox 9](proxmox/zfs-proxmox9.md)

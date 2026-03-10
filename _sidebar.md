@@ -34,5 +34,5 @@
 * ⚙️ **Proxmox**
   * [ZFS Proxmox 9](proxmox/zfs-proxmox9.md)
   * [NVIDIA GPU Guide](proxmox/nvidia-guide.md)
-  * [NVIDIA GPU Guide](proxmox/nvidia-guide-old.md)
+  * [NVIDIA GPU Guide Old](proxmox/nvidia-guide-old.md)
 

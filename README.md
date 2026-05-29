@@ -25,7 +25,7 @@
 |-------|----------------|
 | Dell Pro 16 | Arch Linux · Hyprland · Intel iGPU |
 | Medion Erazer X10 | Arch Linux · Intel Arc A730M · 64GB DDR5 |
-| Dell PowerEdge T620 | Proxmox · 2x NVIDIA A2 + T4 · ZFS |
+| Dell PowerEdge T620 | Proxmox · 2x NVIDIA A2 ZFS |
 | Dell PowerEdge T420 | Proxmox |
 | MacBook Pro M4 | macOS |
 

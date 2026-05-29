@@ -34,6 +34,6 @@
 * ⚙️ **Proxmox**
   * [ZFS Proxmox 9](proxmox/zfs-proxmox9.md)
   * [NVIDIA GPU Guide](proxmox/nvidia-guide.md)
-  * [NVIDIA GPU Guide Old](proxmox/nvidia-guide-old.md)
+  * [NVIDIA GPU Guide Old](proxmox/nvidia-guide2.md)
   * [Debian 12 - Proxmox 8 - GPU drivere](proxmox/debian-12-proxmox-8-GPU-drivere.md)
   * [Debian 13 Proxmox 9.1.5 - GPU drivere](proxmox/debian-13-proxmox-9-1-5-GPU-drivere.md)

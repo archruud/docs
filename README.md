@@ -8,14 +8,14 @@
 
 | Kategori | Innhold |
 |----------|---------|
-| 🐧 Linux / Arch | Kommandoer, Vim, Søking, Aliaser, SCP |
+| 🐧 Linux / Arch | Kommandoer, Vim, Søking, Aliaser, SCP, Debian statisk IP |
 | 📝 Bash | Scripting fra scratch |
-| 🖥️ Hyprland | Tmux dropdown, hdrop |
+| 🖥️ Hyprland | Tmux dropdown, hdrop, ekstra skjerm/Waybar, workspace, multi-monitor |
 | 🤖 AI / Ollama | Terminal guide, Open WebUI på Proxmox |
 | 🔒 VPN | WireGuard, NordVPN |
 | 🌐 Nettverk | VLAN oppsett med UniFi |
 | 🐳 Docker | Dokumentserver oppsett |
-| ⚙️ Proxmox | ZFS, NVIDIA GPU passthrough |
+| ⚙️ Proxmox | ZFS, NVIDIA GPU passthrough (host + LXC), GPU-feilsøking |
 
 ---
 

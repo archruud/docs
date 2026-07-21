@@ -8,6 +8,7 @@
   * [SCP Guide](linux/scp-guide.md)
   * [Bruker og Rettigheter](linux/bruker-rettigheter.md)
   * [Quick Reference](linux/quick-reference.md)
+  * [Debian 13 Statisk IP + Sudo](linux/debian13-statisk-ip-sudo-oppsett.md)
 
 * 📝 **Bash / Scripting**
   * [Bash Scripting Guide](bash/bash-scripting-guide.md)
@@ -15,6 +16,9 @@
 * 🖥️ **Hyprland**
   * [Tmux Dropdown](hyprland/tmux-dropdown.md)
   * [hdrop Guide](hyprland/hdrop-guide.md)
+  * [Ekstra Skjerm + Waybar](hyprland/arch-linux-hyprland-ekstra-skjerm-waybar-guide.md)
+  * [Workspace Oppsett](hyprland/hyprland-workspace-oppsett.md)
+  * [Multi-Monitor Usermodules](hyprland/usermodules-archruud-multimonitor.md)
 
 * 🤖 **AI / Ollama**
   * [Ollama Terminal](ai/ollama-terminal.md)
@@ -33,11 +37,10 @@
 
 * ⚙️ **Proxmox**
   * [ZFS Proxmox 9](proxmox/zfs-proxmox9.md)
-  * [NVIDIA GPU Guide](proxmox/nvidia-guide.md)
-  * [NVIDIA GPU Guide Old](proxmox/nvidia-guide2.md)
-  * [Debian 12 - Proxmox 8 - GPU drivere](proxmox/debian-12-proxmox-8-GPU-drivere.md)
-  * [Debian 13 Proxmox 9.1.5 - GPU drivere](proxmox/debian-13-proxmox-9-1-5-GPU-drivere.md)
-  * [debian13--proxmox-lxc-nvidia-guide](proxmox/debian13--proxmox-lxc-nvidia-guide.md)
-  * [debian13-proxmox-host-nvidia-guide](proxmox/debian13-proxmox-host-nvidia-guide.md)
-
-
+  * [NVIDIA Datacenter GPU Oversikt](proxmox/nvidia-guide.md)
+  * [NVIDIA GPU i LXC Container](proxmox/nvidia-guide-lxc-container.md)
+  * [Debian 12 / Proxmox 8 - GPU Drivere](proxmox/debian12-proxmox8-gpu-drivere.md)
+  * [Debian 13 / Proxmox 9.1.5 - GPU Drivere](proxmox/debian13-proxmox9-gpu-drivere.md)
+  * [Proxmox Host NVIDIA Setup (for LXC)](proxmox/debian13-proxmox-host-nvidia-guide.md)
+  * [Debian 13 LXC NVIDIA Guide](proxmox/debian13-lxc-nvidia-guide.md)
+  * [Feilsøking: Kernel-oppdatering knekker GPU](proxmox/kernel-oppdatering-gpu-feilsoking.md)

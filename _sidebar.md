@@ -19,6 +19,7 @@
   * [Ekstra Skjerm + Waybar](hyprland/arch-linux-hyprland-ekstra-skjerm-waybar-guide.md)
   * [Workspace Oppsett](hyprland/hyprland-workspace-oppsett.md)
   * [Multi-Monitor Usermodules](hyprland/usermodules-archruud-multimonitor.md)
+  * [Migrering: conf → Lua (0.55+)](hyprland/hyprland-lua-migrering.md)
 
 * 🤖 **AI / Ollama**
   * [Ollama Terminal](ai/ollama-terminal.md)

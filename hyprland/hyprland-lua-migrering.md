@@ -426,20 +426,58 @@ Samme mønster som resten — ingen overraskelser.
 4. **Regex-backslash må dobles** i windowrules (`\.` → `\\.`).
 5. **For-løkker** kan erstatte repeterende bind-blokker (workspace 1-10 er det klareste eksempelet).
 
-## Praktisk fremgangsmåte for å teste
+## Endringer etter første gjennomgang (samme dag)
+
+- **`SUPER + F` (fullscreen) er fjernet** — ubrukt bind hos deg, og droppet API-et hadde uansett kjente toggle-bugs i 0.55. Kommentert linje ligger igjen i filen hvis du vil ha den tilbake senere.
+- **`SUPER + SHIFT + R` er lagt til** — full reload av selve Hyprland-configen, ved siden av eksisterende `SUPER + R` (som bare restarter waybar):
+  ```lua
+  hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
+  ```
+  Dette kjører rett og slett `hyprctl reload` — den mest robuste måten å gjøre det på, samme kommando du ville brukt fra terminal. **Viktig begrensning:** dette leser innholdet i filen på nytt, men kan **ikke** bytte mellom `.conf` og `.lua` som config-rot i farten — se neste seksjon om hvorfor.
+
+---
+
+## Praktisk fremgangsmåte for å teste (og hvorfor reboot er riktig, ikke bare reload)
+
+Wikien er eksplisitt på dette punktet: **hvilken fil Hyprland leser (`.conf` eller `.lua`) avgjøres kun ved oppstart, ikke ved reload.** Sitat fra wiki.hypr.land/Configuring/Start: *config-roten avgjøres én gang, ved oppstart — å bytte rot krever alltid en Hyprland-restart, ikke bare en reload.*
+
+Det betyr at planen din (flytte filen inn, så restarte i stedet for å bare reloade) er **helt riktig**, og faktisk nødvendig — `hyprctl reload` alene ville ikke plukket opp at du nå har en `.lua`-fil å lese, fordi Hyprland allerede har bestemt seg for `.conf` for denne kjørende sesjonen.
+
+**Anbefalt prosedyre:**
 
 ```bash
-# 1. Ta backup av gjeldende config
+# 1. Ta backup av gjeldende .conf (behold den - trygg vei tilbake)
 cp ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.bak
 
-# 2. Legg inn den nye hyprland.lua
-# (kopier filen inn i ~/.config/hypr/hyprland.lua)
+# 2. Legg den nye filen på plass
+cp hyprland.lua ~/.config/hypr/hyprland.lua
 
-# 3. Reload - config leses på nytt automatisk ved lagring, men du kan tvinge det:
-hyprctl reload
-
-# 4. Se etter Lua-feil i loggen
-hyprctl monitors   # sanity check at Hyprland fortsatt kjører i det hele tatt
+# 3. Logg ut av Hyprland-sesjonen helt (ikke bare hyprctl reload),
+#    eller reboot rett og slett
+reboot
 ```
 
-Hyprland leser `hyprland.lua` **hvis den finnes**, ellers faller den tilbake på `hyprland.conf`. Du trenger altså ikke slette `.conf`-filen med det samme — behold den som backup til du har verifisert at alle binds fungerer som forventet.
+**Om du trenger kaldstart (full avstenging) eller vanlig reboot:** vanlig `reboot` er nok — Hyprland-sesjonen starter helt på nytt, og config-roten evalueres på nytt fra bunnen av. En full kald avstenging (shutdown, vent, start) gir ikke noe ekstra her utover en vanlig reboot, med mindre du har en helt annen, maskinvarerelatert grunn til å ville kjøre kaldstart (f.eks. GPU-driverproblemer du har hatt før). For selve config-byttet holder `reboot` fint.
+
+**Etter reboot, sjekk:**
+```bash
+hyprctl monitors          # sanity check - kjører Hyprland i det hele tatt
+cat ~/.config/hypr/hyprland.lua | head -1   # bare for å bekrefte hvilken fil som faktisk ligger der
+```
+Config-feil i selve Lua-syntaksen vil vises som en synlig feilmelding/popup i Hyprland ved oppstart (wikien nevner dette eksplisitt: *runtime lua-syntaksfeil avbryter kjøring av filen og gir en feil-popup*) — så du trenger ikke lete i logger for å finne ut om noe er ødelagt, du ser det med en gang.
+
+Test gjerne bindene i denne rekkefølgen først: `SUPER+Return` (terminal), `SUPER+E` (dolphin), `SUPER+1..0` (workspace-bytte), `SUPER+SHIFT+R` (ny reload-bind), mus-drag/resize, og til slutt de tre windowrules (nmgui/blueman/pavucontrol) siden det er der jeg har flagget usikkerhet.
+
+---
+
+## Når alt er verifisert: inn i GitHub
+
+Basert på tidligere samtaler ligger config-utrullingen din i `arch-hypr-dots`-repoet, i modulen **`25-scripts-and-files`** (kjøres sist med hensikt, nettopp for at din komplette config alltid skal vinne over modul 03/04 sine standardverdier). Det er `install-scripts-and-files.sh` i den modulen som kopierer ut `hyprland.conf`, `hyprland.lua` og hele `scripts/`-mappen i `~/.config/hypr/` ved en ny installasjon.
+
+**Så når du har bekreftet at alt fungerer på den kjørende maskinen:**
+
+1. I `arch-hypr-dots`-repoet, oppdater filene under `25-scripts-and-files/` (eller der `install-scripts-and-files.sh` henter dem fra) slik at både `hyprland.conf` (behold som backup/referanse) og den nye `hyprland.lua` ligger sammen med `scripts/`-mappen, akkurat som i dag.
+2. Commit og push som vanlig.
+3. `install-order.conf` trenger **ingen endring** — modul 25 kjører allerede sist, som sikrer at denne filen overskriver eventuelle standard-configer fra tidligere moduler (03-awww, 04-hypridle) ved en fersk installasjon.
+
+Vil du at jeg skal se på selve `install-scripts-and-files.sh` og foreslå den konkrete diffen for å legge til `hyprland.lua` der, eller har du den fra før og trenger bare filen selv?

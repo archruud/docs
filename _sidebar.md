@@ -17,6 +17,7 @@
     * [Migrering: conf → Lua (0.55+)](linux/arch/hyprland/hyprland-lua-migrering.md)
     * [Tmux Dropdown](linux/arch/hyprland/tmux-dropdown.md)
     * [hdrop Guide](linux/arch/hyprland/hdrop-guide.md)
+    * [Bluetooth Oppsett](linux/arch/hyprland/bluetooth-arch-hyprland.md)
 
 * 🐧 **Linux → Debian**
   * [Debian 13: Statisk IP + Sudo](linux/debian/13/statisk-ip-sudo-oppsett.md)

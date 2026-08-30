@@ -1,14 +1,6 @@
 * [🏠 Hjem](/)
 
 * 🐧 **Linux → Arch**
-  * [Arch Kommandoer](linux/arch/arch-kommandoer.md)
-  * [Vim Guide](linux/arch/vim-guide.md)
-  * [Søking i Linux](linux/arch/soking-guide.md)
-  * [Tips og Aliaser](linux/arch/arch-tips-aliases.md)
-  * [SCP Guide](linux/arch/scp-guide.md)
-  * [Bruker og Rettigheter](linux/arch/bruker-rettigheter.md)
-  * [Quick Reference](linux/arch/quick-reference.md)
-  * [NordVPN på Arch](linux/arch/nordvpn-arch.md)
   * 🖥️ **Hyprland**
     * [Skjermoppsett + Clamshell](linux/arch/hyprland/hyprland-skjermoppsett.md)
     * [Ekstra Skjerm + Waybar](linux/arch/hyprland/arch-linux-hyprland-ekstra-skjerm-waybar-guide.md)
@@ -18,6 +10,21 @@
     * [Tmux Dropdown](linux/arch/hyprland/tmux-dropdown.md)
     * [hdrop Guide](linux/arch/hyprland/hdrop-guide.md)
     * [Bluetooth Oppsett](linux/arch/hyprland/bluetooth-arch-hyprland.md)
+  * 🐚 **Quickshell**
+    * [Oversikt](linux/arch/quickshell/quickshell-oversikt.md)
+    * [Bar](linux/arch/quickshell/quickshell-bar.md)
+    * [Overview](linux/arch/quickshell/quickshell-overview.md)
+    * [Kalender](linux/arch/quickshell/quickshell-kalender.md)
+    * [Virtuelt tastatur (norsk)](linux/arch/quickshell/wvkbd-norsk.md)
+    * [Lag eget tastatur-layout](linux/arch/quickshell/wvkbd-eget-layout.md)
+  * [Arch Kommandoer](linux/arch/arch-kommandoer.md)
+  * [Vim Guide](linux/arch/vim-guide.md)
+  * [Søking i Linux](linux/arch/soking-guide.md)
+  * [Tips og Aliaser](linux/arch/arch-tips-aliases.md)
+  * [SCP Guide](linux/arch/scp-guide.md)
+  * [Bruker og Rettigheter](linux/arch/bruker-rettigheter.md)
+  * [Quick Reference](linux/arch/quick-reference.md)
+  * [NordVPN på Arch](linux/arch/nordvpn-arch.md)
 
 * 🐧 **Linux → Debian**
   * [Debian 13: Statisk IP + Sudo](linux/debian/13/statisk-ip-sudo-oppsett.md)

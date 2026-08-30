@@ -11,7 +11,8 @@
 ```
 linux/
 ├── arch/                    ← Arch Linux (Hyprland, kommandoer, tips)
-│   └── hyprland/             ← alt Hyprland-spesifikt
+│   ├── hyprland/             ← alt Hyprland-spesifikt
+│   └── quickshell/           ← Quickshell-moduler (bar, overview, kalender, wvkbd-norsk)
 ├── debian/
 │   ├── 13/                   ← Debian 13 (Trixie)
 │   │   ├── proxmox/9.1.5/    ← Proxmox VE på Debian 13
@@ -40,4 +41,4 @@ bash/      Generell scripting
 
 ---
 
-*archruud.org · Oppdatert 27.08.2026*
+*archruud.org · Oppdatert 30.08.2026*

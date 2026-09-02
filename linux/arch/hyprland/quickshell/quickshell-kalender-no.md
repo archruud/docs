@@ -85,24 +85,55 @@ på samme linje (`--class`, `--name`, og `--profile`-stien) — merk:
 command: ["sh", "-c", "XAPP_FORCE_GTKWINDOW_ICON=\"$HOME/Nedlastinger/google-calendar64.png\" firefox --class GoogleKalender --name GoogleKalender --profile $HOME/.local/share/ice/firefox/GoogleKalender --no-remote \"http://calendar.google.com\""]
 ```
 
-### 5. hyprland.lua — windowrule for blå kant
+### 5. hyprland.lua — windowrules for alle fire bar-vinduene
 
-Legg til som en **egen, frittstående** `hl.window_rule({...})`-blokk,
-sammen med dine andre windowrules (nmgui, blueman, pavucontrol) —
-ikke inni autostart-blokken. Merk igjen: ingen `WebApp-`-prefiks i
-`match`-mønsteret:
+Legg til alle fire som **egne, frittstående** `hl.window_rule({...})`-
+blokker sammen, ikke inni autostart-blokken. Disse fire er bekreftet
+fungerende på det ekte systemet (reelle vindusklasser, ikke gjettet)
+— kopier alle på én gang:
 
 ```lua
 hl.window_rule({
     name  = "float-googlekalender",
-    match = { class = "^(GoogleKalender)$" },
+    match = { class = "^(googlekalender)$" },
     float = true,
     size  = "1000 750",
     center = true,
     animation = "slide",
     border_color = "rgba(2e92dbff)",
 })
+-- WiFi/Network Manager - nmgui
+hl.window_rule({
+    name  = "float-networkmanager",
+    match = { class = "^(com\\.network\\.manager)$" },
+    float = true,
+    size  = "450 600",
+    center = true,
+    animation = "slide",
+})
+-- Bluetooth Manager
+hl.window_rule({
+    name  = "float-blueman",
+    match = { class = "^(blueman-manager)$" },
+    float = true,
+    size  = "600 700",
+    center = true,
+    animation = "slide",
+})
+-- Lyd & Mikrofon Kontroll
+hl.window_rule({
+    name  = "float-pavucontrol",
+    match = { class = "^(org\\.pulseaudio\\.pavucontrol)$" },
+    float = true,
+    size  = "800 900",
+    center = true,
+    animation = "slide",
+})
 ```
+
+Merk at kalender-klassen her er med liten bokstav `googlekalender` —
+match det `hyprctl activewindow` faktisk rapporterer på ditt system
+hvis du navnga profilen annerledes i steg 3/4.
 
 ## Hopper du over dette
 

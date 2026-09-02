@@ -87,24 +87,55 @@ places** on the same line (`--class`, `--name`, and the
 command: ["sh", "-c", "XAPP_FORCE_GTKWINDOW_ICON=\"$HOME/Nedlastinger/google-calendar64.png\" firefox --class GoogleKalender --name GoogleKalender --profile $HOME/.local/share/ice/firefox/GoogleKalender --no-remote \"http://calendar.google.com\""]
 ```
 
-### 5. hyprland.lua — windowrule for the blue border
+### 5. hyprland.lua — windowrules for all four bar popups
 
-Add as a **separate, standalone** `hl.window_rule({...})` block,
-alongside your other windowrules (nmgui, blueman, pavucontrol) — not
-inside the autostart block. Note again: no `WebApp-` prefix in the
-`match` pattern:
+Add all four as **separate, standalone** `hl.window_rule({...})`
+blocks together, not inside the autostart block. These four are
+confirmed working on the live system (real window classes, not
+guessed) — copy all of them in one go:
 
 ```lua
 hl.window_rule({
     name  = "float-googlekalender",
-    match = { class = "^(GoogleKalender)$" },
+    match = { class = "^(googlekalender)$" },
     float = true,
     size  = "1000 750",
     center = true,
     animation = "slide",
     border_color = "rgba(2e92dbff)",
 })
+-- WiFi/Network Manager - nmgui
+hl.window_rule({
+    name  = "float-networkmanager",
+    match = { class = "^(com\\.network\\.manager)$" },
+    float = true,
+    size  = "450 600",
+    center = true,
+    animation = "slide",
+})
+-- Bluetooth Manager
+hl.window_rule({
+    name  = "float-blueman",
+    match = { class = "^(blueman-manager)$" },
+    float = true,
+    size  = "600 700",
+    center = true,
+    animation = "slide",
+})
+-- Lyd & Mikrofon Kontroll
+hl.window_rule({
+    name  = "float-pavucontrol",
+    match = { class = "^(org\\.pulseaudio\\.pavucontrol)$" },
+    float = true,
+    size  = "800 900",
+    center = true,
+    animation = "slide",
+})
 ```
+
+Note the calendar class here is lowercase `googlekalender` — match
+whatever `hyprctl activewindow` actually reports on your system if
+you renamed the profile differently in step 3/4.
 
 ## Skipping this
 

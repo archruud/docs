@@ -10,6 +10,11 @@
     * [Tmux Dropdown](linux/arch/hyprland/tmux-dropdown.md)
     * [hdrop Guide](linux/arch/hyprland/hdrop-guide.md)
     * [Bluetooth Oppsett](linux/arch/hyprland/bluetooth-arch-hyprland.md)
+    * 📦 **Installasjon (nummerert rekkefølge)**
+      * [01 — Base System Setup](linux/arch/hyprland/base-system-setup.md)
+      * [02 — AWWW (Bakgrunnsbilde)](linux/arch/hyprland/awww-setup.md)
+      * [03 — SDDM (Innlogging)](linux/arch/hyprland/sddm-setup.md)
+      * [07 — Screenshots](linux/arch/hyprland/screenshots.md)
     * 🐚 **Quickshell**
       * [Oversikt](linux/arch/hyprland/quickshell/quickshell-oversikt.md)
       * [Bar](linux/arch/hyprland/quickshell/quickshell-bar.md)

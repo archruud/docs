@@ -29,11 +29,31 @@ bash/      Generell scripting
 
 ---
 
+## Fersk Arch/Hyprland-installasjon?
+
+Installasjonen er delt i nummererte steg — kjør dem i rekkefølge fra
+[`archruud/scripts`](https://github.com/archruud/scripts), doc for hvert
+steg ligger under **Linux → Arch → Hyprland → Installasjon**:
+
+| Nr | Steg |
+|----|------|
+| 01 | Base System Setup (pakker + post-install-fikser) |
+| 02 | AWWW (bakgrunnsbilde) |
+| 03 | SDDM (innlogging) |
+| 04 | Kitty (terminal + bash) |
+| 05 | Make Executable / `run`-alias |
+| 06 | Nettverk & Samba |
+| 07 | Screenshots |
+| 08 | Quickshell-moduler (bar, overview, Ice SSB) |
+
+---
+
 ## Maskinvare
 
 | Enhet | Spesifikasjoner |
 |-------|----------------|
 | Dell Pro 16 | Arch Linux · Hyprland · Intel iGPU · ekstern Lenovo Legion 27Q-10 |
+| **archmini** (ASUS NUC Pro) | Arch Linux · Hyprland · 140 TOPS NPU · Lenovo Legion 27Q-10 via HDMI-A-1 @ 2560x1440@144Hz |
 | Medion Erazer X10 | Arch Linux · Intel Arc A730M · 64GB DDR5 |
 | Dell PowerEdge T620 | Proxmox VE 9.1.5 · 2x NVIDIA A2 + Tesla T4 · ZFS |
 | Dell PowerEdge T420 | Proxmox |
@@ -41,4 +61,4 @@ bash/      Generell scripting
 
 ---
 
-*archruud.org · Oppdatert 30.08.2026*
+*archruud.org · Oppdatert 02.09.2026*

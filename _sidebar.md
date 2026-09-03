@@ -22,6 +22,8 @@
         * [08 — Quickshell-moduler](linux/arch/hyprland/quickshell/quickshell-modules-setup.md)
         * [09 — Hypridle](linux/arch/hyprland/hypridle-setup.md)
         * [10 — Hyprlock](linux/arch/hyprland/hyprlock-setup.md)
+      * 🧩 **Additional Programs** (ikke del av grunninstallasjonen)
+        * [KVM/QEMU Testmiljø](linux/arch/hyprland/kvm-qemu-setup.md)
       * 🐚 **Quickshell**
         * [Oversikt](linux/arch/hyprland/quickshell/quickshell-oversikt.md)
         * [Bar](linux/arch/hyprland/quickshell/quickshell-bar.md)

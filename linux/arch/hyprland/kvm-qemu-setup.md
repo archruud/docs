@@ -20,7 +20,7 @@ This is the same setup verified working on Medion Erazer (Feb 2026) — reused h
 
 ## What it does
 
-- Installs `qemu-desktop`, `libvirt`, `virt-manager`, `virt-viewer`, `dnsmasq`, `iptables-nft`, `edk2-ovmf`, `bridge-utils`, `dmidecode`
+- Installs `qemu-desktop`, `libvirt`, `virt-manager`, `virt-viewer`, `dnsmasq`, `iptables-nft`, `edk2-ovmf`, `dmidecode`
 - Enables and starts `libvirtd.socket`
 - Adds your user to the `libvirt` and `kvm` groups
 - Starts and autostarts the default NAT network (`virbr0`)

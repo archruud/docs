@@ -24,6 +24,7 @@
         * [10 — Hyprlock](linux/arch/hyprland/hyprlock-setup.md)
       * 🧩 **Additional Programs** (ikke del av grunninstallasjonen)
         * [KVM/QEMU Testmiljø](linux/arch/hyprland/kvm-qemu-setup.md)
+        * [NUC 16 Pro — Panther Lake Drivere](linux/arch/hyprland/nuc16-panther-lake-drivers.md)
       * 🐚 **Quickshell**
         * [Oversikt](linux/arch/hyprland/quickshell/quickshell-oversikt.md)
         * [Bar](linux/arch/hyprland/quickshell/quickshell-bar.md)

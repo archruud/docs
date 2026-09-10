@@ -11,8 +11,7 @@
       * [Tmux Dropdown](linux/arch/hyprland/tmux-dropdown.md)
       * [hdrop Guide](linux/arch/hyprland/hdrop-guide.md)
       * [Bluetooth Oppsett](linux/arch/hyprland/bluetooth-arch-hyprland.md)
-      * [Opprett bruker nr. 2 (norsk)](linux/arch/hyprland/second-user-setup.no.md)
-      * [Second User Setup (English)](linux/arch/hyprland/second-user-setup.md)
+      * [second user setup](linux/arch/hyprland/second-user-setup.md)
       * 📦 **Installasjon (nummerert rekkefølge)**
         * [01 — Base System Setup](linux/arch/hyprland/base-system-setup.md)
         * [02 — AWWW (Bakgrunnsbilde)](linux/arch/hyprland/awww-setup.md)
